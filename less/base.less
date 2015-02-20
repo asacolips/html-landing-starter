@@ -1,0 +1,66 @@
+// Colors
+@color-primary:			#eee;
+@color-primary-dark:		@color-primary - 30;
+@color-primary-light:		#AC0000;
+@color-secondary:			#999;
+@color-secondary-dark:		@color-secondary - 30;
+@color-secondary-light:	@color-secondary + 30;
+@gray:			#B2B3B7;
+@gray-dark:		#58595b;
+@gray-light:	#e6e7e8;
+@link-color:	white;
+@link-hover:	#83c8e5;
+
+// Breakpoints
+@mobile-narrow:	480px;
+@mobile-max:	640px;
+@tablet-narrow:	800px;
+@tablet-max:	1024px;
+@desktop-max:	1140px;
+
+// Fonts
+@body:		"lato",sans-serif;
+@headline:			"trajan-pro-3",sans-serif;
+
+// Columns
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@total-width: 100%;
+
+// Mixins
+.transition(@property: all, @type: ease-in-out, @duration: 0.25s) {
+	-webkit-transition: @property @type @duration;
+	-moz-transition: @property @type @duration;
+	transition: @property @type @duration;
+}
+
+.box-shadow(@x_off: 4px, @y_off: 4px, @blur: 12px, @offset: -3px, @color: rgba(0,0,0,0.25)) {
+	-webkit-box-shadow: @x_off @y_off @blur @offset @color;
+	-moz-box-shadow: @x_off @y_off @blur @offset @color;
+	box-shadow: @x_off @y_off @blur @offset @color;
+}
+
+.clearer() {
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+/*
+Imports
+---------------------------------------------------------------------------------------------------- */
+
+@font-face {
+	font-family: 'Icon';
+	src:url('/fonts/Icon.eot');
+	src:url('/fonts/Icon.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Icon.woff') format('woff'),
+		url('/fonts/Icon.ttf') format('truetype'),
+		url('/fonts/Icon.svg#Icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

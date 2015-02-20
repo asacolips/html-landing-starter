@@ -1,0 +1,75 @@
+@media only screen and (max-width: @tablet-max) {
+	//LAYOUT
+	#header h1,
+	#header form {
+		display: block;
+		width: auto;
+		float: none;
+		clear: both;
+	}
+
+	.column {
+		.column(6);
+	}
+
+	#col2 {
+		border: none;
+	}
+
+	#col3 {
+		display: block;
+		width: auto;
+		float: none;
+		clear: both;
+		margin: auto;
+		padding-top: 0;
+
+		.member {
+			.column(6);
+		}
+
+		.member:first-child {
+			margin-top: -170px; //hack to fix empty space due to col2 having more than col1
+		}
+	}
+
+	#col1, #col2 {
+		padding-bottom: 0;
+	}
+
+	#col1, #col3 {
+		padding-top: 20px;
+	}
+
+	.member {
+		min-height: 110px;
+	}
+
+	#header form {
+		.container {
+			display: block;
+			float: left;
+			.column(4);
+		}
+
+		h2 {
+			.column(12);
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			margin-top: 22px;
+		}
+	}
+
+	//LOGO
+	#header h1 {
+		background-size: contain;
+	}
+}
+
+@media only screen and (max-width: 1180px) {
+	#header h1 {
+		font-size: 22px;
+	}
+}
